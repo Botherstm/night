@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+<audio id="audioNotifikasi">
+    <source src="https://github.com/Botherstm/musik/blob/main/Hadal%20Ahbek_320kbps.mp3?raw=true" type="audio/mpeg">
+</audio>
+
+<p>Klik tombol di bawah ini untuk memutar atau pause audio.</p>
+<div class="play1">
+<button class=""onclick="playAudio()" type="button">Play Audio</button>
+</div>
+<button onclick="pauseAudio()" type="button">Pause Audio</button> 
+<button onclick="stopAudio()" type="button">Stop Audio</button> 
+
+<script type="text/javascript">
+var el = document.getElementById("audioNotifikasi"); 
+
+function playAudio() { 
+    el.play(); 
+} 
+
+function loop(){
+    el.loop();
+}
+
+function pauseAudio() { 
+    el.pause(); 
+} 
+function stopAudio() { 
+    el.stop(); 
+} 
+</script>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<html>
+<meta charset='UTF-8'/><meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/><meta content='IE=edge' http-equiv='X-UA-Compatible'/><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"><script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script><link href="https://cobabuka.likeadream.repl.co/style.css" rel="stylesheet" type="text/css" /><script src="https://cobabuka.likeadream.repl.co/script.js"></script>
+<head>
+
+</head>
+<body>
+<style>body{background-image: url("https://i.postimg.cc/4393fVFj/wallpaper1.jpg");background-repeat: no-repeat;background-size: 100% 100%;animation:none;transition:all .3s ease;}</style>
+<div id="konten">
+
+<div id="fotoloveu">
+  <div class="image">
+    <img id="photo" src="https://i.postimg.cc/28MgpQHY/hati.png" width="150px" height="150px"/>
+  </div>
+    <span id="sp2">
+    </span></div>
+
+<div id='slider'>
+  <p>Hai kamu ツ</p>
+  <p>Aku mau bilang sesuatu nih</p>
+  <p>Tapi kamu jangan marah ya:'</p>
+  <p>Aku bikin ini karena...</p>
+  <p>Ingin mengungkapkan isi hatiku ツ</p>
+  <p>Aku suka sama kamu &#9829;</p>
+  <p>Tapi sebelumnya...</p>
+  <p>Pencet LOVE ini dulu dong~<label class='lovein' onClick="prtnyaan()">&#128157;</label></p>
+</div>
+
+<div id="ftnembak"><div class="image">
+<img src="https://c.tenor.com/1Si3A6alsiEAAAAi/pentol-quby.gif" width="100px" height="100px"/></div>
+<span id="kamumaugak"></span></div>
+
+<div id="contTom"><a style="margin:12px 12px 12px 0;" class='button' onClick="duar();"></i>
+Mau dong</a><div id="Bn"><a style="margin:12px 12px 12px 0;" class='button' onClick="tolak()"></i>
+Enggak</a></div></div>
+<div id="tombWA"><a class='button whatsapp' onClick='bukaWa();'><i class='icon whatsapp'></i>
+Kirim</a></div>
+
+</div>
+<div id="bodyblur"></div>
+
+<script> 
+function play() {
+//Link Audio Bisa Diganti
+  var audio = new Audio('https://github.com/Botherstm/musik/blob/286247b738ba1bb0bf4388951b9de3747a4ab596/musik.mp3?raw=true');audio.play();} 
+//Teks pertanyaan
+var o=0,start;
+start = "Kamu mau jadi pacar aku?";
+//Teks jika menerima
+var a=0,finish;
+finish = "I Love You <3";          
+//Pesan WhatsApp
+function bukaWa(){window.location = "https://api.whatsapp.com/send?phone=&text=Aku mau jadi pacar kamu <3" + "%0A%0A" + "- " + dateTime;} 
+</script>
+
+<script type="text/javascript">            
+            var today = new Date();var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear()+'.';var dateTime = date;
+            const swals = Swal.mixin({
+                allowOutsideClick: false,
+            });
+            async function mulai(){
+                await swals.fire('Lihat ini sampai akhir ya ツ');
+                setTimeout(showDiv, 900);play();                      
+            }            
+            mulai();
+</script>
+<script>
+  flag=1
+  function tolak(){
+    if(flag==1)
+        {Bn.style.margin="0 0 0 100px";flag=2}
+    else if(flag==2){Bn.style.margin="0 0 0 50px";flag=3}
+    else if(flag==3){Bn.style.margin="0";tolakteks();flag=1}}
+    async function tolakteks(){await swals.fire('Makanya jangan nolak :(');}
+</script>
+</body>
+</html>

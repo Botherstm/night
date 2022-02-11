@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MUSIK</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css" integrity="sha512-oc9+XSs1H243/FRN9Rw62Fn8EtxjEYWHXRvjS43YtueEewbS6ObfXcJNyohjHqVKFPoXXUxwc+q1K7Dee6vv9g==" crossorigin="anonymous" />
+</head>
+<body>
+    <button class="btn btn-primary" onclick="toggleMusic()" id="btn-playback" data-play="false">
+    <i class="fa fa-play"></i>
+    <span id="btn-text">MULAI</span>
+    </button>
+    <audio id="audio" src="https://github.com/Botherstm/musik/blob/main/Hadal%20Ahbek_320kbps.mp3?raw=true" >
+    <script>
+    const myAudio = document.getElementById("audio");
+    const btn = document.getElementById("btn-playback");
+    const btnIcon = document.querySelector("#btn-playback > i");
+    const btnText = document.getElementById("btn-text");
+    
+    const toggleMusic = () => {      
+    const dataPlay = btn.getAttribute('data-play');
+            
+    if(dataPlay === 'false') {
+        btn.setAttribute('data-play', 'true');
+        myAudio.play();
+        btnIcon.classList.remove("fa-play");
+        btnIcon.classList.add("fa-pause");
+        btnText.innerText = "PAUSE";
+    } else {
+        btn.setAttribute('data-play', 'false');
+        myAudio.pause();
+        btnIcon.classList.remove("fa-pause");
+        btnIcon.classList.add("fa-play");
+        btnText.innerText = "MULAI";
+    }
+    };
+    
+    myAudio.onpause = () => {
+        btn.setAttribute('data-play', 'false');
+        myAudio.pause();
+        btnIcon.classList.remove("fa-pause");
+        btnIcon.classList.add("fa-play");
+        btnText.innerText = "MULAI";
+    };
+    </script>
+</body>
+</html>
